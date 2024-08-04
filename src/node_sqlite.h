@@ -73,6 +73,8 @@ class StatementSync : public BaseObject {
   bool BindValue(const v8::Local<v8::Value>& value, const int index);
   v8::Local<v8::Value> ColumnToValue(const int column);
   v8::Local<v8::Value> ColumnNameToValue(const int column);
+
+  static void IterateNextCallback(const v8::FunctionCallbackInfo<v8::Value>& args);
 };
 
 }  // namespace sqlite
